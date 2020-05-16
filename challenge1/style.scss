@@ -1,0 +1,35 @@
+*
+{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "join join"
+    "pricing  whyus";
+    height:100vh;
+}
+
+section.join
+{
+    grid-area:join ;
+    background-color: wheat;
+}
+
+section.pricing
+{
+    grid-area: pricing;
+    background-color: red;
+}
+
+section.why_us
+{
+    grid-area: whyus;
+    background-color: yellow;
+}
