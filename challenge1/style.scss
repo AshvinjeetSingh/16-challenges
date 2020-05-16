@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
 *
 {
     padding:0px;
     margin:0px;
     box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Karla', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background:hsl(204, 43%, 93%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
 }
 
 .container
@@ -13,23 +28,111 @@
     grid-template-areas: 
     "join join"
     "pricing  whyus";
-    height:100vh;
+    
+    max-width: 1440px;
+    margin: 20px 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    
+    
 }
 
+a {
+    text-decoration: none;
+}
 section.join
 {
     grid-area:join ;
-    background-color: wheat;
+    margin-bottom: 0;
+    color: hsl(218, 22%, 67%);
+    background-color: white;
+
+    h1 
+    {
+        color: hsl(179, 62%, 43%);
+    }
+    h3 
+    {
+        color: hsl(71, 73%, 54%);
+    }
+    p
+    {
+        margin-bottom: 0;
+        color: hsl(218, 22%, 67%);
+    }
+    
+    .hang 
+    {
+        color: #dddddd;
+    }
 }
 
 section.pricing
 {
     grid-area: pricing;
-    background-color: red;
+    background: hsl(179, 62%, 43%);
+    h2 
+    {
+        color: #ffffff;
+        margin-top: 0;
+    }
 }
 
 section.why_us
 {
     grid-area: whyus;
-    background-color: yellow;
+    background: #4abebd;
+    ul 
+    {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    ul li 
+    {
+        line-height: 1.5;
+        color: #dddddd;
+    }
+}
+
+.join,.pricing,.why_us 
+{
+    padding: 15px 15px;
+}
+
+.amt 
+{
+    font-size: 2em;
+    font-weight: 700;
+    color: #ffffff;
+    padding-right: 10px;
+}
+.button 
+{
+    color: #ffffff;
+    background: hsl(71, 73%, 54%);
+    padding: 10px 0px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 240px;
+    text-align: center;
+}
+.hang 
+{
+    display: flex;
+    align-items: center;
+    span
+    {
+        color:#dddddd;
+    }
+}
+
+@media (max-width:768px)
+{
+    .container 
+    {
+        display: block;
+    }
 }
